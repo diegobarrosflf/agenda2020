@@ -7,14 +7,9 @@ public class App{
 		Contato c2 = new Contato("Marcio", "6548-3265", "marcio@gmail.com");
 		Contato c3 = new Contato("Jerovane", "6548-3265");
 
-		System.out.println(c1.getNome());
-		System.out.println(c1.getTelefone());
-
-		System.out.println(c2.getNome());
-		System.out.println(c2.getTelefone());
-
-		System.out.println(c3.getNome());
-		System.out.println(c3.getTelefone());
+		c1.mostraContato();
+		c2.mostraContato();
+		c3.mostraContato();
 
 
 

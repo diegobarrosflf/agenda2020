@@ -43,6 +43,14 @@ public class Contato{
 		this.email = email;
 	}
 
+	public void mostraContato(){
+		System.out.println("--- Contato ---");
+		System.out.println(this.nome);
+		System.out.println(this.telefone);
+		if(this.email != null) System.out.println(this.email);
+		System.out.println( "\n");
+	}
+
 
 
 
