@@ -24,6 +24,23 @@ public class Agenda{
 		else contatos.add(obj); return true;
 	}
 
+	//Pesquisar contato por nome
+	public List<Contato> findByName(String nome){
+		List<Contato> result = new ArrayList<>();
+		for(Contato c : contatos){
+			if(c.getNome().toLowerCase().contains(nome.toLowerCase())) result.add(c);
+		}
+		if(result.size() < 1) System.out.println("\nNenhum contato encontrado.\n");
+		return result;
+	}
+
+	//dado uma lista imprimir os contatos
+	public void listarContatos(List<Contato> contatos){
+		for (Contato c : contatos ) {
+			c.mostrarContato();
+		}
+	}
+
 	private void povoarAgenda(){
 
 		Contato c1 = new Contato("João Barros", "3214-6548", "barros@gmail.com");

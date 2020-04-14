@@ -30,6 +30,12 @@ public class App{
 
 			switch(menu){
 
+				case 1:
+					System.out.println("Digite um nome para pesquisar");
+					String nome = teclado.nextLine();
+					agenda.listarContatos(agenda.findByName(nome));
+					break;
+
 				case 6:
 					System.out.println("Saindo...");
 					teclado.close();
