@@ -126,6 +126,14 @@ public class Agenda{
 		}
 	}
 
+	//overloading sobrecarga
+	//listar todos os contatos da agenda 
+	public void listarContatos(){
+		for (Contato c : this.contatos ) {
+			c.mostrarContato();
+		}
+	}
+
 	private void povoarAgenda(){
 
 		Contato c1 = new Contato("João Barros", "3214-6548", "barros@gmail.com");

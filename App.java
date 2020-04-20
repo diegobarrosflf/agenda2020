@@ -51,6 +51,11 @@ public class App{
 					agenda.editarContato(teclado);
 					break;
 
+				case 5:
+					System.out.println("Lista de contatos");
+					agenda.listarContatos();
+					break;
+
 
 				case 6:
 					System.out.println("Saindo...");
