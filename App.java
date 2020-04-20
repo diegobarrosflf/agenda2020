@@ -36,6 +36,11 @@ public class App{
 					agenda.listarContatos(agenda.findByName(nome));
 					break;
 
+				case 2:
+					System.out.println("Cadastro de contato");
+					agenda.addContato(agenda.criarNovoContato(teclado));
+					break;
+
 				case 6:
 					System.out.println("Saindo...");
 					teclado.close();

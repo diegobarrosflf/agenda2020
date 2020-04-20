@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Agenda{
 
@@ -17,6 +18,21 @@ public class Agenda{
 	}
 
 	//serviço sobre um contato
+
+	//criar novo contato
+	public Contato criarNovoContato(Scanner teclado){
+
+		System.out.println("Digite o nome do contato");
+		String nome = teclado.nextLine();
+
+		System.out.println("Digite o telefone do contato");
+		String telefone = teclado.nextLine();
+
+		System.out.println("Digite o email do contato");
+		String email = teclado.nextLine();
+
+		return new Contato(nome,telefone, email);
+	}
 
 	//adicionar um contato
 	public boolean addContato(Contato obj){
