@@ -41,6 +41,12 @@ public class App{
 					agenda.addContato(agenda.criarNovoContato(teclado));
 					break;
 
+				case 3:
+					System.out.println("Deletar contato");
+					agenda.deletarContato(teclado);
+					break;
+
+
 				case 6:
 					System.out.println("Saindo...");
 					teclado.close();

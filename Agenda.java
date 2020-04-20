@@ -18,6 +18,46 @@ public class Agenda{
 	}
 
 	//serviço sobre um contato
+	public boolean deletarContato(Scanner teclado){
+
+		System.out.println("Digite o nome do contato");
+		String nome = teclado.nextLine();
+
+		List<Contato> result = findByName(nome);
+
+		listarContatos(result);
+
+		System.out.println("Escolha o id do contato para deletar.");
+
+		int id = teclado.nextInt();
+
+		if(deleteById(id)){
+			System.out.println("Contato deletado."); return true;
+		}
+		else{
+			System.out.println("Não foi possível deletar o contato."); return false;
+		}
+
+
+
+	}
+
+
+	public Contato findById(int id){
+		for (Contato c : contatos) {
+			if(c.getId() == id) return c;
+		}
+		System.out.println("Desculpe, nenhum contato encontrado...");
+		return null;
+	}
+
+	//deleta um contato peo id
+	public boolean deleteById(int id){
+		Contato obj = findById(id);
+		if(obj == null) return false;
+		else return contatos.remove(obj);
+	}
+
 
 	//criar novo contato
 	public Contato criarNovoContato(Scanner teclado){
