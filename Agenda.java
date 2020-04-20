@@ -18,6 +18,35 @@ public class Agenda{
 	}
 
 	//serviço sobre um contato
+	public void editarContato(Scanner teclado){
+
+		System.out.println("\n Digite o nome do contato");
+		String nome = teclado.nextLine();
+
+		listarContatos(findByName(nome));
+
+		System.out.println("Escolher um id de contato para editar");
+		int id = teclado.nextInt();
+		Contato obj = findById(id);
+
+		//limpar buffer
+		teclado.nextLine();
+
+		System.out.println("Digite o nome do contato");
+		obj.setNome(teclado.nextLine());
+
+		System.out.println("Digite o telefone do contato");
+		obj.setTelefone(teclado.nextLine());
+
+		System.out.println("Digite o email do contato");
+		obj.setEmail(teclado.nextLine());
+
+		obj.mostrarContato();
+		System.out.println("\nContato editado.\n");
+
+	}
+
+
 	public boolean deletarContato(Scanner teclado){
 
 		System.out.println("Digite o nome do contato");

@@ -46,6 +46,11 @@ public class App{
 					agenda.deletarContato(teclado);
 					break;
 
+				case 4:
+					System.out.println("Editar contato");
+					agenda.editarContato(teclado);
+					break;
+
 
 				case 6:
 					System.out.println("Saindo...");
